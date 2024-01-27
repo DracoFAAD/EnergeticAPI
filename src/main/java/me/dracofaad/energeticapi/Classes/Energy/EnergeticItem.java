@@ -1,18 +1,9 @@
 package me.dracofaad.energeticapi.Classes.Energy;
 
-import me.dracofaad.energeticapi.EnergeticAPI;
 import me.dracofaad.energeticapi.EnergeticItemHandler;
-import org.bukkit.Bukkit;
-import org.bukkit.NamespacedKey;
-import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
-import org.bukkit.inventory.meta.ItemMeta;
-import org.bukkit.persistence.PersistentDataContainer;
 import org.bukkit.persistence.PersistentDataType;
-import org.bukkit.plugin.java.JavaPlugin;
-import org.jetbrains.annotations.NotNull;
-import org.jetbrains.annotations.Nullable;
 
 import java.util.Objects;
 
@@ -70,7 +61,7 @@ public abstract class EnergeticItem extends EnergeticBase {
         if (Energy > MaxEnergy) Energy = MaxEnergy;
         this.Energy = Energy;
         setData("Energy", PersistentDataType.FLOAT, Energy, getItem());
-        energyUpdated();
+        onEnergyUpdated();
     }
 
     @Override
@@ -99,8 +90,8 @@ public abstract class EnergeticItem extends EnergeticBase {
         return Energy == 0;
     }
 
-    public abstract void rightClick(PlayerInteractEvent event);
-    public abstract void leftClick(PlayerInteractEvent event);
+    public abstract void onRightClick(PlayerInteractEvent event);
+    public abstract void onLeftClick(PlayerInteractEvent event);
 
     public abstract ItemStack createItem();
 
@@ -116,11 +107,9 @@ public abstract class EnergeticItem extends EnergeticBase {
         UniqueID = id;
     }
 
-    public abstract JavaPlugin getPlugin();
-
     public void SetUniqueInstanceID(String id) {
         UniqueInstanceID = id;
     }
 
-    public abstract void energyUpdated();
+    public abstract void onEnergyUpdated();
 }

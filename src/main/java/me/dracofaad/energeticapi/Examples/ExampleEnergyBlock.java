@@ -1,4 +1,4 @@
-package me.dracofaad.energeticapi.ExampleItems;
+package me.dracofaad.energeticapi.Examples;
 
 import me.dracofaad.energeticapi.Classes.Energy.EnergeticBlock;
 import org.bukkit.Bukkit;
@@ -14,12 +14,12 @@ public class ExampleEnergyBlock extends EnergeticBlock {
     }
 
     @Override
-    public void rightClick(PlayerInteractEvent e) {
+    public void onRightClick(PlayerInteractEvent e) {
         Bukkit.broadcastMessage("Test");
     }
 
     @Override
-    public void leftClick(PlayerInteractEvent e) {
+    public void onLeftClick(PlayerInteractEvent e) {
 
     }
 

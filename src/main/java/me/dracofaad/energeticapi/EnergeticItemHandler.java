@@ -2,20 +2,13 @@ package me.dracofaad.energeticapi;
 
 import me.dracofaad.energeticapi.Classes.Energy.EnergeticBlock;
 import me.dracofaad.energeticapi.Classes.Energy.EnergeticItem;
-import me.dracofaad.energeticapi.Classes.Interfaces.IItemContainer;
-import me.dracofaad.energeticapi.ExampleItems.ExampleEnergyItem;
 import org.bukkit.Bukkit;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
-import org.bukkit.event.inventory.InventoryInteractEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
-import org.bukkit.inventory.InventoryHolder;
 import org.bukkit.plugin.java.JavaPlugin;
-import org.checkerframework.checker.guieffect.qual.UI;
 
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -99,11 +92,11 @@ public class EnergeticItemHandler implements Listener {
             item.setItem(event.getItem());
 
             if (event.getAction() == Action.LEFT_CLICK_AIR || event.getAction() == Action.LEFT_CLICK_BLOCK ) {
-                item.leftClick(event);
+                item.onLeftClick(event);
             }
 
             if (event.getAction() == Action.RIGHT_CLICK_AIR || event.getAction() == Action.RIGHT_CLICK_BLOCK) {
-                item.rightClick(event);
+                item.onRightClick(event);
             }
             return;
         }

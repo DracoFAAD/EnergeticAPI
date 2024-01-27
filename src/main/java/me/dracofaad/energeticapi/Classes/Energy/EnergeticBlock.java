@@ -9,10 +9,8 @@ import org.bukkit.block.Block;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.persistence.PersistentDataType;
-import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-import java.io.Serial;
 import java.io.Serializable;
 import java.util.Objects;
 
@@ -44,8 +42,8 @@ public abstract class EnergeticBlock extends EnergeticBase implements Serializab
         this.blockData.MaxEnergy = MaxEnergy;
     }
 
-    public abstract void rightClick(PlayerInteractEvent e);
-    public abstract void leftClick(PlayerInteractEvent e);
+    public abstract void onRightClick(PlayerInteractEvent e);
+    public abstract void onLeftClick(PlayerInteractEvent e);
     public abstract Material getBlockMaterial();
     public abstract int getBreakingTime(PlayerInteractEvent interactEvent);
 

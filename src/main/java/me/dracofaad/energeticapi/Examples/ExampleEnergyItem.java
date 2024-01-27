@@ -1,26 +1,14 @@
-package me.dracofaad.energeticapi.ExampleItems;
+package me.dracofaad.energeticapi.Examples;
 
 import me.dracofaad.energeticapi.Classes.Energy.EnergeticItem;
-import me.dracofaad.energeticapi.Classes.Interfaces.IItemContainer;
-import me.dracofaad.energeticapi.Classes.Interfaces.ITickable;
-import me.dracofaad.energeticapi.EnergeticAPI;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
-import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerInteractEvent;
-import org.bukkit.inventory.EquipmentSlot;
-import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
-import org.bukkit.plugin.java.JavaPlugin;
-import org.jetbrains.annotations.NotNull;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class ExampleEnergyItem extends EnergeticItem {
-
     public ExampleEnergyItem(ItemStack itemStack) throws RuntimeException {
         super(itemStack);
     }
@@ -30,13 +18,13 @@ public class ExampleEnergyItem extends EnergeticItem {
     }
 
     @Override
-    public void rightClick(PlayerInteractEvent event) {
+    public void onRightClick(PlayerInteractEvent event) {
         subtractEnergy(10);
         Bukkit.broadcastMessage("Right Clicked!");
     }
 
     @Override
-    public void leftClick(PlayerInteractEvent event) {
+    public void onLeftClick(PlayerInteractEvent event) {
         Bukkit.broadcastMessage("Left Clicked!");
     }
 
@@ -50,12 +38,7 @@ public class ExampleEnergyItem extends EnergeticItem {
     }
 
     @Override
-    public JavaPlugin getPlugin() {
-        return EnergeticAPI.getEnergeticAPI();
-    }
-
-    @Override
-    public void energyUpdated() {
+    public void onEnergyUpdated() {
         Bukkit.broadcastMessage("Updated! " + Energy);
     }
 }

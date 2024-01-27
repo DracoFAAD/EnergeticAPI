@@ -3,7 +3,6 @@ package me.dracofaad.energeticapi;
 import me.dracofaad.energeticapi.Classes.Energy.EnergeticBlock;
 import me.dracofaad.energeticapi.Classes.Energy.EnergeticItem;
 import me.dracofaad.energeticapi.Classes.Interfaces.ICustomType;
-import me.dracofaad.energeticapi.ExampleItems.ExampleEnergyItem;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Item;
@@ -12,9 +11,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.event.inventory.InventoryAction;
 import org.bukkit.event.inventory.InventoryClickEvent;
-import org.bukkit.inventory.ItemStack;
 
-import java.lang.reflect.InvocationTargetException;
 import java.util.Iterator;
 
 public class EnergeticGarbageCollection implements Listener {

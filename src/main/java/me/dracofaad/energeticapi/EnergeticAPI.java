@@ -1,9 +1,9 @@
 package me.dracofaad.energeticapi;
 
 import me.dracofaad.energeticapi.Classes.BlockInstancesData;
-import me.dracofaad.energeticapi.ExampleItems.ExampleEnergyBlock;
-import me.dracofaad.energeticapi.ExampleItems.ExampleEnergyContainerItem;
-import me.dracofaad.energeticapi.ExampleItems.ExampleEnergyItem;
+import me.dracofaad.energeticapi.Examples.ExampleEnergyBlock;
+import me.dracofaad.energeticapi.Examples.ExampleEnergyContainerItem;
+import me.dracofaad.energeticapi.Examples.ExampleEnergyItem;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
