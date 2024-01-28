@@ -44,4 +44,4 @@ import me.dracofaad.energeticapi.EnergeticAPI;
 EnergeticAPI energeticAPI = EnergeticAPI.getEnergeticAPI();
 ````
 
-### You should be ready to start using the plugin! If you want to learn more, look at the [wiki](https://youtube.com)!
+### You should be ready to start using the plugin! If you want to learn more, look at the [wiki](https://github.com/DracoFAAD/EnergeticAPI/wiki)!
