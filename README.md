@@ -6,7 +6,7 @@ Currently supported: 1.20
 ## 1. Implementation
 ### Maven
 Repository:
-````    
+````xml    
 <repositories>
     <repository>
        <id>jitpack.io</id>
@@ -16,7 +16,7 @@ Repository:
 ````
 
 Dependency:
-````
+````xml
 <dependency>
     <groupId>com.github.DracoFAAD</groupId>
     <artifactId>EnergeticAPI</artifactId>
@@ -26,12 +26,12 @@ Dependency:
 
 ### Gradle
 Repository:
-````
+````gradle
 maven { url 'https://jitpack.io' }
 ````
 
 Dependency:
-````
+````gradle
 implementation 'com.github.DracoFAAD:EnergeticAPI:1.0'
 ````
 
